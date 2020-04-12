@@ -7,7 +7,7 @@ Also includes my [Mercury wordlist](https://github.com/oscarholst/Mercury-Wordli
 ![Docker Stars](https://img.shields.io/docker/stars/oscarholst/alpine-john)
 
 ## Usage
-Download the image via [Docker Hub](https://hub.docker.com/r/oscarholst/alpine-john/) or just clone this repo and run docker-compose to build it yourself:
+Download the image via [Docker Hub](https://hub.docker.com/r/oscarholst/alpine-john/) or just clone the [Github repo](https://github.com/oscarholst/alpine-john/) and run docker-compose to build it yourself:
 ```
 docker-compose up -d
 ```

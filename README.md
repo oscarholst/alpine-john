@@ -1,9 +1,13 @@
 # alpine-john
 Alpine Linux with John the Ripper in a ready to go Docker container :whale:
-Also includes my Mercury wordlist available at Github and two binaries for zip2john and rar2john.
+Also includes my [Mercury wordlist](https://github.com/oscarholst/Mercury-Wordlist) and two binaries for zip2john and rar2john.
+
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/oscarholst/alpine-john)
+![Docker Pulls](https://img.shields.io/docker/pulls/oscarholst/alpine-john)
+![Docker Stars](https://img.shields.io/docker/stars/oscarholst/alpine-john)
 
 ## Usage
-Download the image via Docker Hub or just clone this repo and run docker-compose to build it yourself:
+Download the image via [Docker Hub](https://hub.docker.com/r/oscarholst/alpine-john/) or just clone this repo and run docker-compose to build it yourself:
 ```
 docker-compose up -d
 ```

@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  alpine-john:
+    image: oscarholst/alpine-john
+    build: .
+    command: tail -f /dev/null
+    volumes:
+      - ./cracking:/root/cracking
+
+volumes:
+  cracking:

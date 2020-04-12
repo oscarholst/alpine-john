@@ -11,7 +11,7 @@ docker-compose up -d
 ## Example usage of John the Ripper
 ###### Cracking a bogus zip file also included in this repo
 ```
-docker container -it exec <container> bash
+docker container exec -it <container> bash
 zip2john cracking/VerySecretZip.zip > cracking/zip.hash
 john --wordlist="wordlist/Mercury-Wordlist.lst" cracking/zip.hash
 john cracking/zip.hash --show

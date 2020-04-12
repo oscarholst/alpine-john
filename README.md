@@ -11,6 +11,20 @@ Download the image via [Docker Hub](https://hub.docker.com/r/oscarholst/alpine-j
 ```
 docker-compose up -d
 ```
+or
+```
+# Build it
+docker build -t oscarholst/alpine-john:latest .
+
+# Run the container once and jump into the bash shell
+docker container run -it --rm oscarholst/alpine-john:latest bash
+
+# OR run the container in background
+docker container run -d -it --name alpine-john oscarholst/alpine-john:latest
+
+# And to access it
+docker container exec -it alpine-john bash
+```
 
 ## Example usage of John the Ripper
 ###### Cracking a bogus zip file also included in this repo

@@ -3,20 +3,13 @@ FROM alpine:3.11.5
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git libressl-dev john
 
-WORKDIR /usr/bin/
-COPY ./usr/bin/zip2john /usr/bin/
-COPY ./usr/bin/rar2john /usr/bin/
-RUN chown root:root zip2john && \
-    chown root:root rar2john && \
-    chmod 775 zip2john && \
-    chmod 775 rar2john
+COPY --chown=root:root ./usr/bin/zip2john ./usr/bin/rar2john /usr/bin/
 
-WORKDIR /root/
-RUN mkdir cracking
+RUN chmod 775 /usr/bin/zip2john /usr/bin/rar2john && \
+    mkdir /root/cracking/ /root/wordlists
 
-WORKDIR /root/cracking/
 COPY ./cracking/VerySecretZip.zip /root/cracking/
 
+RUN git clone https://github.com/oscarholst/Mercury-Wordlist.git /root/wordlists/
+
 WORKDIR /root/
-RUN mkdir wordlists && \
-    git clone https://github.com/oscarholst/Mercury-Wordlist.git /root/wordlists/
